@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-bg-svg">
+        <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grid-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:var(--accent-purple);stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:var(--accent-blue);stop-opacity:0.2" />
+                </linearGradient>
+            </defs>
+            <path d="M0 100 L1000 100 M0 300 L1000 300 M0 500 L1000 500 M0 700 L1000 700 M0 900 L1000 900" stroke="url(#grid-grad)" stroke-width="1" fill="none" />
+            <path d="M100 0 L100 1000 M300 0 L300 1000 M500 0 L500 1000 M700 0 L700 1000 M900 0 L900 1000" stroke="url(#grid-grad)" stroke-width="1" fill="none" />
+            <circle cx="300" cy="300" r="3" fill="var(--accent-purple)">
+                <animate attributeName="r" values="3;5;3" dur="3s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="700" cy="500" r="3" fill="var(--accent-blue)">
+                <animate attributeName="r" values="3;5;3" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.2;1;0.2" dur="4s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="500" cy="100" r="3" fill="var(--accent-purple)">
+                <animate attributeName="r" values="3;5;3" dur="5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.2;1;0.2" dur="5s" repeatCount="indefinite" />
+            </circle>
+        </svg>
+    </div>
+    <div class="container" data-aos="fade-up">
+        <h1>Build Scalable Digital Solutions That Drive Real Business Growth</h1>
+        <p>Syncra TechX delivers enterprise-grade software, AI systems, and expert talent to accelerate your business transformation.</p>
+        <div class="hero-btns">
+            <a href="#services" class="btn btn-primary">Explore Solutions</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">Book a Free Strategy Call</a>
+        </div>
+        <div class="hero-trust">
+            <span>✔ Trusted by startups & enterprises</span>
+            <span>✔ Agile development methodology</span>
+            <span>✔ End-to-end technical execution</span>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview -->
+<section class="about-preview container" data-aos="fade-up">
+    <div class="card">
+        <div class="grid-2">
+            <div>
+                <h2>Tech & Talent in Sync</h2>
+                <p>
+                    At Syncra TechX, we believe transformative solutions emerge when
+                    cutting-edge technology aligns with world-class talent.
+                    We don't just build software; we engineer growth.
+                </p>
+                <a href="{{ url_for('about') }}" class="btn btn-outline">
+                    Learn More About Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats container" data-aos="fade-up">
+        <div class="stats-grid">
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+            <h2 class="counter" data-target="50">0</h2>
+            <span class="plus">+</span>
+            <p>Projects Delivered</p>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+            <h2 class="counter" data-target="20">0</h2>
+            <span class="plus">+</span>
+            <p>Engineers</p>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+            <h2 class="counter" data-target="5">0</h2>
+            <span class="plus">+</span>
+            <p>Industries Served</p>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="400">
+            <h2 class="counter" data-target="98">0</h2>
+            <span class="plus">%</span>
+            <p>Client Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services container">
+    <div class="section-header" data-aos="fade-up">
+        <h2>Expertise & Solutions</h2>
+        <p>Specialized services designed to accelerate your digital journey.</p>
+    </div>
+    
+        <div class="services-grid">
+            <div class="card service-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Technology Development</h3>
+                <p>From custom software to AI-driven applications, we build robust solutions that scale with your vision.</p>
+            </div>
+            
+            <div class="card service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-users-gear"></i>
+                </div>
+                <h3>Talent Solutions</h3>
+                <p>Connect with top-tier specialized talent curated for your specific technical and cultural requirements.</p>
+            </div>
+            
+            <div class="card service-card" data-aos="fade-up" data-aos-delay="450">
+                <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI & Intelligent Systems</h3>
+                <p>Leverage the power of Machine Learning and Artificial Intelligence to automate processes and gain insights.</p>
+            </div>
+        </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-us container">
+    <h2>Why Choose Syncra TechX?</h2>
+    <div class="services-grid">
+        <div class="feature">
+            <h3><i class="fas fa-check-circle"></i> Enterprise Quality</h3>
+            <p>We deliver production-ready code that meets the highest standards of security and performance.</p>
+        </div>
+        <div class="feature">
+            <h3><i class="fas fa-bolt"></i> Rapid Delivery</h3>
+            <p>Our agile methodology ensures fast iterations and quicker time-to-market for your digital products.</p>
+        </div>
+        <div class="feature">
+            <h3><i class="fas fa-shield-halved"></i> Future-Proof</h3>
+            <p>We use modern tech stacks that are built to last and evolve with your business.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Industries -->
+<section class="industries">
+    <div class="container">
+        <h2>Industries We Transform</h2>
+        <div class="industry-tags">
+            <span class="tag">FinTech</span>
+            <span class="tag">Healthcare</span>
+            <span class="tag">E-commerce</span>
+            <span class="tag">Logistics</span>
+            <span class="tag">EdTech</span>
+            <span class="tag">SaaS</span>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta container">
+    <div class="card">
+        <h2>Ready to Build the Future With Syncra TechX?</h2>
+        <p>Let’s transform your ideas into scalable, intelligent digital solutions.</p>
+        <a href="{{ url_for('contact') }}" class="btn">Get a Free Consultation</a>
+    </div>
+</section>
+
+{% endblock %}
