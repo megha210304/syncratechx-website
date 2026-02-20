@@ -36,12 +36,23 @@
             <ul class="nav-links">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeicA4rJH4WCXQ3GjZKxujku99uv9oa12nWIUMMbtlSzPjcEA/viewform"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Contact
+                    </a>
+                </li>
             </ul>
 
             <!-- CTA Button -->
             <div class="nav-cta">
-                <a href="{{ url_for('contact') }}" class="btn btn-primary">Get Started</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeicA4rJH4WCXQ3GjZKxujku99uv9oa12nWIUMMbtlSzPjcEA/viewform"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-primary">
+                    Get Started
+                </a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -54,21 +65,16 @@
 
     <!-- ================= MAIN CONTENT ================= -->
     <main>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                <div class="flash-messages">
-                    {% for category, message in messages %}
-                        <div class="alert alert-{{ category }}">{{ message }}</div>
-                    {% endfor %}
-                </div>
-            {% endif %}
-        {% endwith %}
-
         {% block content %}{% endblock %}
     </main>
 
     <div class="mobile-cta-bar">
-        <a href="{{ url_for('contact') }}" class="btn btn-primary">Start Your Project</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeicA4rJH4WCXQ3GjZKxujku99uv9oa12nWIUMMbtlSzPjcEA/viewform"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary">
+            Start Your Project
+        </a>
     </div>
 
     <!-- ================= FOOTER ================= -->
@@ -90,17 +96,23 @@
                 <ul>
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeicA4rJH4WCXQ3GjZKxujku99uv9oa12nWIUMMbtlSzPjcEA/viewform"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Contact
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div class="footer-services">
                 <h3>Services</h3>
                 <ul>
-                    <li>Technology Development</li>
-                    <li>Talent Solutions</li>
-                    <li>AI & Machine Learning</li>
-                    <li>Custom Software</li>
+                    <li>Custom Software Development</li>
+                    <li>Web Application Development</li>
+                    <li>Cloud & DevOps Solutions</li>
+                    <li>AI & Automation</li>
                 </ul>
             </div>
 
@@ -127,9 +139,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 800,
+        duration: 500,
         once: true,
-        offset: 100,
+        offset: 120,
         easing: 'ease-out-cubic'
       });
     </script>

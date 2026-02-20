@@ -63,20 +63,18 @@ Getting Started (Local Development)
 
    Visit `http://127.0.0.1:5000/` in your browser.
 
-Contact Form & Email Sending
-----------------------------
+Contact Form Integration
+------------------------
 
-The `/contact` route validates basic form fields and can optionally send an email when a message is submitted.
+All contact interactions are centralized through an embedded Google Form on the `/contact` page.
 
-To enable email sending in a production environment, provide the following environment variables:
+The contact page:
 
-- `SMTP_SERVER` – SMTP host (for example, `smtp.gmail.com`)
-- `SMTP_PORT` – SMTP port (commonly `465` for SSL)
-- `SMTP_USER` – SMTP username (often the sending email address)
-- `SMTP_PASSWORD` – SMTP password or app password
-- `CONTACT_RECIPIENT` – email that should receive contact form submissions (defaults to `hr@headsyncratechx.com` if not set)
+- Presents a hero section with “Get in Touch” messaging
+- Embeds the Google Form in a responsive card container
+- Provides a fallback button that opens the form directly in a new tab
 
-If these variables are not set, the contact form will still validate and display a success message, but email sending will be skipped safely.
+There is no server‑side form processing or email handling in Flask for contacts; this keeps the backend simple and shifts data collection to Google Forms.
 
 Production Deployment
 ---------------------
@@ -99,7 +97,7 @@ This app is designed to be deployed behind a production WSGI server such as guni
 
 Use your hosting provider (Render, Railway, etc.) to:
 
-- Configure environment variables (`SECRET_KEY`, SMTP settings, `CONTACT_RECIPIENT`)
+- Configure environment variables such as `SECRET_KEY`
 - Enable HTTPS / SSL
 - Attach a custom domain
 
