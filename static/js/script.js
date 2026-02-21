@@ -82,4 +82,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    const blob = document.getElementById('cursor-blob');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const blobDisabled = !blob || prefersReducedMotion || window.innerWidth < 768;
+
+    if (!blobDisabled) {
+        const blobSize = 420;
+        let targetX = window.innerWidth / 2;
+        let targetY = window.innerHeight / 3;
+        let currentX = targetX;
+        let currentY = targetY;
+
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+
+        const handleMouseMove = (event) => {
+            targetX = event.clientX;
+            targetY = event.clientY;
+        };
+
+        const animateBlob = () => {
+            currentX = lerp(currentX, targetX, 0.08);
+            currentY = lerp(currentY, targetY, 0.08);
+            const x = currentX - blobSize / 2;
+            const y = currentY - blobSize / 2;
+            blob.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+            requestAnimationFrame(animateBlob);
+        };
+
+        document.addEventListener('mousemove', handleMouseMove);
+        animateBlob();
+    } else if (blob) {
+        blob.style.display = 'none';
+    }
 });

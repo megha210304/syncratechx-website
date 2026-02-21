@@ -1,7 +1,7 @@
 Syncra TechX Website
 ====================
 
-Syncra TechX is a small, production-style Flask application that serves a marketing site for a tech and talent studio. It is designed to look and behave like a modern SaaS landing page: mobile‑first, animated, and conversion‑focused.
+SyncraTechX is a small, production-style Flask application that serves a marketing site for an enterprise-focused IT services firm. It is designed to look and behave like a modern SaaS landing page: mobile‑first, animated, and conversion‑focused.
 
 Project Structure
 -----------------
