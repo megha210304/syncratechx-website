@@ -14,7 +14,7 @@ def about():
 
 @app.route('/contact')
 def contact():
-    return redirect("https://docs.google.com/forms/d/e/1FAIpQLSeicA4rJH4WCXQ3GjZKxujku99uv9oa12nWIUMMbtlSzPjcEA/viewform")
+    return render_template('contact.html')
 
 
 @app.errorhandler(404)
